@@ -5,7 +5,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "web" do |web|
     web.vm.hostname = "webserver"
-    web.vm.network "forwarded_port", guest: 80, 10080
+    web.vm.network "forwarded_port", guest: 80, host: 10080
     web.vm.network "private_network", ip: "192.168.57.10"
     
     web.vm.provider "virtualbox" do |vbweb|
@@ -20,7 +20,7 @@ Vagrant.configure(2) do |config|
   
   config.vm.define "db" do |db|
     db.vm.hostname = "database"
-    db.vm.network "forwarded_port", guest: 80, 10081
+    db.vm.network "forwarded_port", guest: 80, host: 10081
     db.vm.network "private_network", ip: "192.168.57.11"
     
     db.vm.provider "virtualbox" do |vb|
