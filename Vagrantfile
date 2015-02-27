@@ -7,10 +7,9 @@
 # you're doing.
 Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.hostname = "summa"
-  config.vm.box = "demoapp"
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
-  config.vm.network "forwarded_port", guest: 8080, host: 8080
+  config.vm.hostname = "trusty64"
+  config.vm.box = "trusty64"
+  config.vm.network "forwarded_port", guest: 8080, host: 10080
   config.vbguest.auto_update = true
   # config.vm.network "private_network", ip: "192.168.33.10"
 
@@ -28,7 +27,7 @@ Vagrant.configure(2) do |config|
      # Display the VirtualBox GUI when booting the machine
      # vb.gui = true  
      # Customize the amount of memory on the VM:
-     vb.memory = "512"
+     vb.memory = "384"
   end
 
   # config.vm.provision "shell", inline: <<-SHELL
