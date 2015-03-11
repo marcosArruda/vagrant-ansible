@@ -1,0 +1,12 @@
+# Add the user 'johnd' with a specific uid and a primary group of 'admin'
+- hosts: all
+  sudo: yes
+  tasks:
+    - name: remove user node1
+      action: user name=node1 state=present remove=yes
+    - name: create a new user
+      action: user name=node1
+              shell=/bin/bash
+              system=yes
+              comment="Node 1 User"
+              password=$6$Cq9t0xPK.T1Pbeef$eYxA2TPa5NDiUkOWEqzTqqUMePF0gCnNR5WzxJ3keWxa99LbSEOdpFyGqhnqV1zOP9FmUaTz2eEAxHO/C9ti50
