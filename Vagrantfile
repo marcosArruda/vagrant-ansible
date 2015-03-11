@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
       vbnode1.memory = "384"
     end
     
-    web.vm.provision "ansible" do |ansible|
+    node1.vm.provision "ansible" do |ansible|
       ansible.playbook = "node1.yml"
       # ansible.verbose = "vvvv"
     end
@@ -27,12 +27,12 @@ Vagrant.configure(2) do |config|
       vbnode2.memory = "384"
     end
     
-    db.vm.provision "ansible" do |ansible|
+    node2.vm.provision "ansible" do |ansible|
       ansible.playbook = "node2.yml"
       # ansible.verbose = "vvvv"
     end
   end
-  
+
   # USING SHELL PROVISIONING
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
