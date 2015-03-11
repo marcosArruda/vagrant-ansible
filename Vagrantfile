@@ -35,13 +35,9 @@ Vagrant.configure(2) do |config|
 
   # USING SHELL PROVISIONING
   config.vm.provision "shell", inline: <<-SHELL
-    sudo add-apt-repository -y ppa:webupd8team/java
     sudo apt-get update
     sudo apt-get install -y openjdk-7-jdk maven git
-    mkdir projects
-    cd projects
-    git clone https://github.com/marcosArruda/vagrant-ansible.git
-    cd vagrant-ansible
-    
+    # mkdir projects
+    # cd projects
   SHELL
 end
