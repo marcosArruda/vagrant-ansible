@@ -1,3 +1,4 @@
 .vagrant/
 vagrant-ansible.iml
 .idea/
+/certificates/*.pub

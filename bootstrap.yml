@@ -4,8 +4,8 @@
   remote_user: root
 
   vars: 
-    user_name: creston
-    user_pass: $6$gGF67h7gg6$gHpPcLliXbq4wGX8SywQ4BLf/iUaRYNzlN6IBsN1YXI.o/ITmqfeirKcYTenyTo67csjdUTRHTsGVtE0zd9sZ1
+    user_name: lollypop
+    user_pass: $6$2olMA1H6KFu7BYlB$288DE.WD9XmWlsFNTyMaeitgx1qgxGxr3O.bcaHJ6KREagZAnGmIDlWTBu9Vo4f1rGk.dGSb50v73vasSGGJ1/
 
   tasks: 
   - name: Update apt cache
